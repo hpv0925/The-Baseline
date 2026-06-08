@@ -15,8 +15,6 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  useEffect(() => setMenuOpen(false), [pathname])
-
   const isActive = (path: string) => pathname === path
 
   return (
@@ -40,7 +38,7 @@ export default function Nav() {
           <span></span>
         </button>
       </nav>
-      <div className={`mobile-menu${menuOpen ? ' mobile-menu--open' : ''}`}>
+      <div className={`mobile-menu${menuOpen ? ' mobile-menu--open' : ''}`} onClick={() => setMenuOpen(false)}>
         <Link href="/services">Services</Link>
         <Link href="/programs">Programs</Link>
         <Link href="/provider">Provider</Link>

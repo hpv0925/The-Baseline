@@ -3,7 +3,7 @@ export default function BookingCTA() {
     <section id="booking">
       <div className="booking-glow"></div>
       <div className="booking-inner">
-        <div className="booking-tag">// Ready to Start</div>
+        <div className="booking-tag">{'//'} Ready to Start</div>
         <h2 className="booking-headline">
           Your new <em>baseline</em> starts Thursday.
         </h2>

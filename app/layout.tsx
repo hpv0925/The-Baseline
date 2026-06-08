@@ -37,9 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${cormorant.variable} ${ibmPlexMono.variable} ${outfit.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         <Nav />
         {children}
         <Footer />
